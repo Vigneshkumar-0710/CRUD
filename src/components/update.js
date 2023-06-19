@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'; 
 import {Button, Checkbox , Form} from 'semantic-ui-react';
 import axios from 'axios';
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 export default function Update() {
     let history = useNavigate();
@@ -40,7 +40,7 @@ export default function Update() {
                 <Form.Field>
                     <Checkbox label='I agree to the Terms and Conditions' checked={checkbox} onChange={(e)=>setCheckbox(!checkbox)} />
                 </Form.Field>
-                <Button type='submit' onClick={updateAPIData}>Update</Button>
+                <Link to="/read"><Button type='submit' onClick={updateAPIData}>Update</Button></Link>
             </Form>
         </div>
     )

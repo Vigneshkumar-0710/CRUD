@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import {Button, Checkbox, Form} from 'semantic-ui-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 
 import axios from 'axios';
 export default function Create() {
@@ -43,10 +43,14 @@ export default function Create() {
             onChange={(e)=> setCheckbox(!checkbox)} 
             />
         </Form.Field>
+        <Link to="/read">
         <Button 
         type='submit'
         onClick={postData}
-        >Submit</Button>
+        >
+            Submit
+        </Button>
+        </Link>
 
     </Form>
     )
