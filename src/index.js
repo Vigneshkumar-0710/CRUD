@@ -5,6 +5,7 @@ import './index.css';
 import Read from './components/read';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Loader from './components/Loader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
